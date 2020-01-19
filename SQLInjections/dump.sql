@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mariadb102
--- Generation Time: Dec 22, 2019 at 01:39 PM
+-- Generation Time: Jan 19, 2020 at 01:39 PM
 -- Server version: 10.2.26-MariaDB-1:10.2.26+maria~bionic
 -- PHP Version: 7.2.22
 
@@ -15,6 +15,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `security`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+                            `key` varchar(32) NOT NULL,
+                            `value` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`key`, `value`) VALUES
+('salt', 'cat'),
+('price_monthly', '9.99'),
+('price_yearly', '79.99');
 
 -- --------------------------------------------------------
 
